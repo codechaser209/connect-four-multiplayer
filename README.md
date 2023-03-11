@@ -1,16 +1,28 @@
-# connect_four
+# Connect Four Multiplayer Game
 
-A new Flutter project.
+This is an offline multiplayer Connect Four game developed using Flutter. It allows two players to compete against each other on the same device. The game follows the standard Connect Four rules: players take turns dropping their colored discs into the game board, and the first player to connect four of their discs in a row wins the game.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+* **Multiplayer mode**: Play against another player on the same device.
+* **Offline gameplay**: No internet connection required to play the game.
+* **Customizable UI**: The game's UI can be customized by changing the colors and fonts in the source code.
 
-A few resources to get you started if this is your first Flutter project:
+## Requirements
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* Flutter SDK installed on your machine.
+* A physical or virtual device to run the game on.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+* Clone this repository to your local machine.
+* Open the project in your preferred code editor.
+* Run flutter pub get to install dependencies.
+* Connect your physical or virtual device to your machine.
+* Run flutter run to build and launch the game on your device.
+
+## Contributing
+Contributions to this project are welcome! If you find a bug, have a feature request, or want to contribute code, please open an issue or a pull request on this repository.
+
+## Credits
+This game was developed by SoftMostro and inspired by the classic Connect Four game.
