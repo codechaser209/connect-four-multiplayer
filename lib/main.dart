@@ -134,7 +134,7 @@ class _GameScreenState extends State<GameScreen> {
                                   end: Alignment.bottomRight),
                               child: Center(
                                   child: board[index] == ''
-                                      ? Text(index.toString())
+                                      ? const Text('')
                                       : board[index] == 'B'
                                           ? Padding(
                                               padding:
