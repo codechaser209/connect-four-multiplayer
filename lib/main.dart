@@ -278,7 +278,7 @@ class _GameScreenState extends State<GameScreen> {
           board[iteration - 7] = '';
         }
       });
-      await Future.delayed(const Duration(milliseconds: 200));
+      await Future.delayed(const Duration(milliseconds: 400));
       iteration = iteration + 7;
 
       if (iteration < 42) {
@@ -296,6 +296,7 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   bool checkForWinner() {
+    // if board[i][j] = "red" ^ board[i][j] = board[i][j+1] ^ board[i][j] = board[i][j+2] ^ board[i][j] = board[i][j+3] then "red" is the winner.
     for (int i = 0; i < 6; i++) {
       for (int j = 0 + (7 * i); j < 4 + (7 * i); j++) {
         if (board[j] != '' &&
@@ -307,6 +308,7 @@ class _GameScreenState extends State<GameScreen> {
       }
     }
 
+    // if board[i][j] = "blue" ^ board[i][j] = board[i+1][j] ^ board[i][j] = board[i+2][j] ^ board[i][j] = board[i+3][j] then "blue" is the winner.
     for (int i = 0; i < 7; i++) {
       for (int j = (0 * 7) + i; j < (3 * 7) + i; j = j + 7) {
         if (board[j] != '' &&
@@ -318,6 +320,7 @@ class _GameScreenState extends State<GameScreen> {
       }
     }
 
+    // if board[i][j] = "red" ^ board[i][j] = board[i+1][j+1] ^ board[i][j] = board[i+2][j+2] ^ board[i][j] = board[i+3][j+3] then "red" is the winner.
     for (int i = 0; i < 3; i++) {
       for (int j = 0 + (i * 7); j < 4 + (7 * i); j++) {
         if (board[j] != '' &&
@@ -329,6 +332,7 @@ class _GameScreenState extends State<GameScreen> {
       }
     }
 
+    // if board[i][j] = "blue" ^ board[i][j] = board[i+1][j-1] ^ board[i][j] = board[i+2][j-2] ^ board[i][j] = board[i+3][j-3] then "blue" is the winner.
     for (int i = 0; i < 3; i++) {
       for (int j = 6 + (i * 7); j >= 3 + (7 * i); j--) {
         if (board[j] != '' &&
